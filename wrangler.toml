@@ -1,0 +1,16 @@
+name = "jnex-server"
+main = "src/index.ts"
+compatibility_date = "2025-10-01"
+compatibility_flags = ["nodejs_compat"]
+
+# Runs once a day: deletes expired sessions / login challenges / old rate-limit rows
+[triggers]
+crons = ["17 3 * * *"]
+
+[vars]
+ENVIRONMENT = "production"
+# Websites that may call this API from a browser (comma separated)
+ALLOWED_ORIGINS = "https://hub.jnex.com.lk"
+
+# Secrets (NOT here): DATABASE_URL, ADMIN_API_KEY, JWT_SECRET, DATA_KEY,
+# LICENSE_PRIVATE_KEY, LICENSE_PUBLIC_KEY   ->  see README.md

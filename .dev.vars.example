@@ -1,0 +1,13 @@
+# Copy this file to ".dev.vars" (same folder) and fill the values.
+# ".dev.vars" is ignored by git: it must NEVER be uploaded to GitHub.
+DATABASE_URL=postgresql://USER:PASSWORD@HOST-pooler.ap-southeast-1.aws.neon.tech/neondb?sslmode=require
+# Used only by "npm run migrate" (Neon "Connect" with pooling OFF):
+DATABASE_URL_DIRECT=postgresql://USER:PASSWORD@HOST.ap-southeast-1.aws.neon.tech/neondb?sslmode=require
+# The next 5 come from "npm run secrets":
+ADMIN_API_KEY=
+JWT_SECRET=
+DATA_KEY=
+LICENSE_PRIVATE_KEY=
+LICENSE_PUBLIC_KEY=
+ENVIRONMENT=dev
+ALLOWED_ORIGINS=http://localhost:5173,http://localhost:8080
